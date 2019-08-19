@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  padding: 20px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ccc;
+  background: white;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+button {
+  color: #6fa8dd;
+
+}
+
+.card {
+  min-width: 250px;
+}

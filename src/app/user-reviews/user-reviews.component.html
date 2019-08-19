@@ -1,0 +1,9 @@
+<h3>User Review</h3>
+<div class="user-reviews">
+  <div *ngFor="let reviews of AllUserReviews">
+    <app-review (onSaveReview)="saveReview($event)" [userReviews]="reviews" [editMode]="false" ></app-review>
+  </div>
+
+  <app-review (onSaveReview)="saveReview($event)" [userReviews]="newReviews" [editMode]="true"></app-review>
+
+</div>

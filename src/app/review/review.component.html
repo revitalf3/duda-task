@@ -1,0 +1,30 @@
+<div class="container" *ngIf="editMode else reviewMode">
+
+
+  <mat-form-field>
+    <input matInput placeholder="Your Name" name="name" [(ngModel)]="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Your Comment" name="comment" [(ngModel)]="comment"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="onSubmit()">Add</button>
+
+
+</div>
+
+
+<ng-template #reviewMode>
+  <mat-card class="card">
+
+    <mat-card-content>
+      <h3>{{userReviews.name}}</h3>
+      <p>{{userReviews.comment}}</p>
+      <img [src]="userReviews.avatar">
+    </mat-card-content>
+  </mat-card>
+
+</ng-template>
+
+
+
